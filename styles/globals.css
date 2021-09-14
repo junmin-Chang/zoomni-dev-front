@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, arial, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+
+}
+
+  * {
+    box-sizing: border-box;
+
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+
+  ul {
+    margin-left: 1rem;
+    list-style: square;
+  }
+
+  ol {
+    margin-left: 1rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+
+  }
+
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.navbar {
+  background: linear-gradient(90deg,#41295a,#2F0743);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Press Start 2P";
+}
+
+p code {
+  background-color: rgba(107, 25, 191, 0.62);
+  border-radius: 6px;
+  padding: 2px 2px;
+}
+
+
