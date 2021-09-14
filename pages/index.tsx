@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 import client from "../apollo-client";
 import Link from 'next/link'
 import Head from "next/head";
-import Layout from "../components/layout";
 import {GET_ALL_POSTS} from "../lib/query";
+import {useState} from "react";
+import Pagination from "../components/pagination";
 export const renderDate =  (dateString : string) => {
     const date = new Date(dateString);
     const monthName = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
@@ -30,7 +31,18 @@ export async function getStaticProps() {
 }
 
 const Home: NextPage = ({posts} : any) => {
-  return (
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(10)
+    const lastIndex = currentPage * postsPerPage;
+    const firstIndex = lastIndex - postsPerPage;
+
+    const currentPosts = (tmp : object[]) => {
+        let currentPosts : object[] = [];
+        currentPosts = tmp.slice(firstIndex, lastIndex);
+        return currentPosts;
+    }
+
+    return (
       <div>
           <Head>
               <title>ZOOMNI.DEV</title>
@@ -39,7 +51,7 @@ const Home: NextPage = ({posts} : any) => {
           </Head>
 
               <div className="flex items-center flex-col justify-center list-none">
-                  {posts.map((post : any, index : any) => (
+                  {currentPosts(posts).map((post : any, index : any) => (
                       <Link href={`/posts/${post._id}`} key={index}>
                           <a className="group container mt-5 p-4 border-b-2">
                               <h3 className="text-black text-xl dark:text-white mt-4 group-hover:text-purple-500">{post.title}</h3>
@@ -48,6 +60,7 @@ const Home: NextPage = ({posts} : any) => {
                           </a>
                       </Link>
                   ))}
+                  <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={setCurrentPage}/>
               </div>
       </div>
 
