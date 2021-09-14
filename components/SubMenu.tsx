@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {useState} from "react";
 
-const SubMenu = ({ item } : any) => {
+const SubMenu = ({ item, onClick } : any) => {
     const [subnav, setSubnav] = useState(false);
     const showSubnav = () => setSubnav(!subnav)
     return (
@@ -24,7 +24,9 @@ const SubMenu = ({ item } : any) => {
                 item.subNav.map((item : any, index : any) => {
                     return (
                         <Link href={item.path} key={index}>
-                            <a className="bg-white h-16 pl-12 flex items-center no-underline text-black text-lg hover:text-white hover:bg-purple-700 cursor-pointer">
+                            <a className="bg-white h-16 pl-12 flex items-center no-underline text-black text-lg hover:text-white hover:bg-purple-700 cursor-pointer"
+                               onClick={onClick}
+                            >
                                 <span className="lt-4 text-sm">{item.title}</span>
                             </a>
                         </Link>

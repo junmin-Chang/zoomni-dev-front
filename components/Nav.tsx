@@ -83,7 +83,7 @@ function Nav() {
                             </a>
                         </Link>
                         {sidebarData.map((item, index) => (
-                            <SubMenu item={item} key={index}/>
+                            <SubMenu item={item} key={index} onClick={showSidebar}/>
                         ))}
                     </div>
                 </nav>
