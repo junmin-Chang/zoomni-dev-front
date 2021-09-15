@@ -29,7 +29,7 @@ export default function Posts({ posts } : any) {
                 <title>{category} | ZOOMNI.DEV</title>
             </Head>
                 <div className="flex items-center flex-col justify-center list-none">
-                    <h1 className="text-gray-550 dark:text-white">{category}({posts.length})</h1>
+                    <h1 className="text-gray-550 dark:text-white ml-4">{category}({posts.length})</h1>
 
                     {currentPosts(posts).map((post : any, index : any) => (
                         <Link href={`/posts/${post._id}`} key={index}>

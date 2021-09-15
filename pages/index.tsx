@@ -49,7 +49,7 @@ const Home: NextPage = ({posts} : any) => {
               <meta property="og:title" content="ZOOMNI.DEV | 개발 일지"/>
               <meta property="og:description" content="장준민의 개발 일기 입니다."/>
           </Head>
-          <h1 className="text-gray-550 dark:text-white">전체 글({posts.length})</h1>
+          <h1 className="text-gray-550 dark:text-white ml-4">전체 글({posts.length})</h1>
 
               <div className="flex items-center flex-col justify-center list-none">
                   {currentPosts(posts).map((post : any, index : any) => (
