@@ -3,14 +3,42 @@ import {GET_POST, getAllPostsId } from "../../lib/query";
 import {renderDate} from "../index";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/codeblock";
-import Layout from "../../components/layout";
 import client from "../../apollo-client";
 import Comment from "../../components/comment";
 import remarkGfm from "remark-gfm";
+import {useEffect, useState} from "react";
+import {AiOutlineArrowUp} from 'react-icons/ai'
 export default function Post({ post } : any) {
+    const [visible, setVisible] = useState(false)
+
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop
+        if (scrolled > 300) {
+            setVisible(true)
+        } else if (scrolled <= 300) {
+            setVisible(false)
+        }
+    }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisible)
+    } ,[])
+
     return (
         <div className="bg-white dark:bg-gray-750 mt-0 px-4 py-4 min-h-screen">
-
+            <button
+                onClick={scrollToTop}
+                className={`fixed bg-purple-500 text-white rounded-full p-2 z-50 bottom-2 right-3 ${visible ? 'inline' : 'none'}`}
+            >
+                <AiOutlineArrowUp className="text-3xl"/>
+            </button>
             <Head>
                 <title>{post.title}</title>
                 <meta name="description" content={post.html}/>
