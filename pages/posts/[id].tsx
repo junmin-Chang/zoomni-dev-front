@@ -35,7 +35,7 @@ export default function Post({ post } : any) {
         <div className="bg-white dark:bg-gray-750 mt-0 px-4 py-4 min-h-screen">
             <button
                 onClick={scrollToTop}
-                className={`fixed bg-purple-500 text-white rounded-full p-2 z-50 bottom-2 right-3 ${visible ? 'inline' : 'none'}`}
+                className={`fixed bg-purple-500 text-white rounded-full p-2 z-50 bottom-2 right-3 ${visible ? 'inline' : 'hidden'}`}
             >
                 <AiOutlineArrowUp className="text-3xl"/>
             </button>
