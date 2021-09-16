@@ -31,6 +31,7 @@ export async function getStaticProps() {
 }
 
 const Home: NextPage = ({posts} : any) => {
+    // pagination
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10)
     const lastIndex = currentPage * postsPerPage;
