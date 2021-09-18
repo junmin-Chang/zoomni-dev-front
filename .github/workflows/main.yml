@@ -30,6 +30,8 @@ jobs:
         - name: npm install before excuting scripts
           run: npm install --no-optional
         - name: run scripts
-          run: sh scripts/generate-sitemap.sh
+          run: |
+            chmod +x scripts/generate-sitemap.sh
+            sh scripts/generate-sitemap.sh
         - name: npm run build
           run: npm run build
