@@ -9,9 +9,12 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+env:
+  BASE_URL: ${{secrets.BASE_URL}}
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,8 +35,6 @@ jobs:
         - name: npm install before excuting scripts
           run: npm install --no-optional
         - name: run scripts
-          env:
-            API_KEY: ${{ secrets.API_KEY }}
           run: |
             chmod +x ./scripts/generate-sitemap.sh
             sh ./scripts/generate-sitemap.sh
