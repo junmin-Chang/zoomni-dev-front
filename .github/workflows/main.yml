@@ -27,9 +27,9 @@ jobs:
           with:
             persist-credentials: false
 
-      - name: npm install before excuting scripts
-        run: npm install --no-optional
-      - name: run scripts
-        run: sh scripts/generate-sitemap.sh
-      - name: npm run build
-        run: npm run build
+        - name: npm install before excuting scripts
+          run: npm install --no-optional
+        - name: run scripts
+          run: sh scripts/generate-sitemap.sh
+        - name: npm run build
+          run: npm run build
