@@ -23,15 +23,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout source code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
+      - name: Open Web Client Directory
+        run: ls -la
       - name: npm install before excuting scripts
         run: npm install --no-optional
       - name: run scripts
         run: |
-          chmod +x ./scripts/generate-sitemap.sh
-          sh ./scripts/generate-sitemap.sh
+          chmod +x scripts/generate-sitemap.sh
+          sh scripts/generate-sitemap.sh
         shell: bash
       - name: npm run build
         run: npm run build
