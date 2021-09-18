@@ -36,6 +36,7 @@ jobs:
             chmod +x ./scripts/generate-sitemap.sh
             sh ./scripts/generate-sitemap.sh
 
+       - name: Deploy to Vercel
        - uses: amondnet/vercel-action@v19
          with:
            vercel-token: ${{secrets.VERCEL_TOKEN}}
