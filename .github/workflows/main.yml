@@ -35,10 +35,13 @@ jobs:
           run: |
             chmod +x ./scripts/generate-sitemap.sh
             sh ./scripts/generate-sitemap.sh
-
-       - name: Deploy to Vercel
-       - uses: amondnet/vercel-action@v19
-         with:
-           vercel-token: ${{secrets.VERCEL_TOKEN}}
-           vercel-org-id: ${{secrets.VERCEL_ORG_ID}}
-           vercel-project-id: ${{secrets.VERCEL_PROJECT_ID}}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
