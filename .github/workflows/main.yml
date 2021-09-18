@@ -27,6 +27,8 @@ jobs:
           with:
             persist-credentials: false
 
+        - name: check file list
+          run: ls -la
         - name: npm install before excuting scripts
           run: npm install --no-optional
         - name: run scripts
