@@ -31,7 +31,7 @@ jobs:
           run: npm install --no-optional
         - name: run scripts
           run: |
-            chmod +x scripts/generate-sitemap.sh
-            sh scripts/generate-sitemap.sh
+            chmod +x ./scripts/generate-sitemap.sh
+            sh ./scripts/generate-sitemap.sh
         - name: npm run build
           run: npm run build
