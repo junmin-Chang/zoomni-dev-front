@@ -10,7 +10,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "sh ./scripts/generate-sitemap.sh"
+      "pre-commit": "sh ./scripts/generate-sitemap.sh && git add ."
     }
   },
   "dependencies": {
