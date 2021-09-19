@@ -35,7 +35,9 @@ jobs:
           run: |
             chmod +x ./scripts/generate-sitemap.sh
             sh ./scripts/generate-sitemap.sh
-
+            git add .
+            git commit -m "update sitemap"
+            git push origin master
         - uses: amondnet/vercel-action@v20
           with:
             vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
