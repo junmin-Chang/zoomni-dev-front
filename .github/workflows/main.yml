@@ -35,6 +35,9 @@ jobs:
           run: |
             chmod +x ./scripts/generate-sitemap.sh
             sh ./scripts/generate-sitemap.sh
+
+            git config --global user.email "chjm219@kookmin.ac.kr"
+            git config --global user.name "junmin-Chang"
             git add .
             git commit -m "update sitemap"
             git push origin master
