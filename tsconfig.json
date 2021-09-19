@@ -16,7 +16,8 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "allowJs": true
+    "allowJs": true,
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",

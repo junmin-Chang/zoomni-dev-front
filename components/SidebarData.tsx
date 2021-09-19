@@ -6,7 +6,7 @@ export const sidebarData = [
         path: '/profile',
     },
     {
-        title: 'Frontend',
+        title: 'Development',
         path: '#',
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -35,18 +35,8 @@ export const sidebarData = [
             {
                 title: 'CSS',
                 path: '/CSS'
-            }
-        ]
-    },
+            },
 
-
-    {
-        title: 'Backend',
-        path: '#',
-        iconClosed: <RiIcons.RiArrowDownSFill />,
-        iconOpened: <RiIcons.RiArrowUpSFill />,
-
-        subNav: [
             {
                 title: 'NodeJS',
                 path: '/NodeJS',
@@ -57,6 +47,7 @@ export const sidebarData = [
             }
         ]
     },
+
     {
         title: '글쓰기',
         path: '/private',
