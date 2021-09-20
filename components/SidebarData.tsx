@@ -44,6 +44,10 @@ export const sidebarData = [
             {
                 title: 'GraphQL',
                 path: '/GraphQL',
+            },
+            {
+                title: 'Database',
+                path: '/Database'
             }
         ]
     },
