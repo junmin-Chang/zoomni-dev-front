@@ -1,6 +1,8 @@
 cd public
 
+echo "기존 사이트맵 제거"
 rm -rf sitemap
+echo "사이트맵 디렉토리 새로 생성"
 mkdir sitemap
 
 cd ..
