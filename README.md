@@ -1,5 +1,7 @@
 ## Stack
 
+
+
 > Front : NextJS, Apollo Client
 > 
 > Back: Apollo Server, GraphQL, MongoDB

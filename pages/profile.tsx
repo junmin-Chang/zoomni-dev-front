@@ -7,7 +7,7 @@ function Profile() {
                 <Head>
                     <title>ABOUT 장준민</title>
                 </Head>
-                <h1 className="pl-2 text-gray-550 text-4xl border-l-8 border-purple-250 dark:text-white">About 장준민</h1>
+                <h1 className="pl-2 text-gray-550 text-4xl border-l-8 border-purple-250 dark:text-white animate-bounce">About 장준민</h1>
                 <Image src='/images/me.png'
                        className="rounded-full"
                        priority
