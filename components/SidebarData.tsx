@@ -25,6 +25,10 @@ export const sidebarData = [
                 path: '/Redux',
             },
             {
+                title: 'Javascript',
+                path: '/Javascript'
+            },
+            {
                 title: 'Typescript',
                 path: '/Typescript'
             },
