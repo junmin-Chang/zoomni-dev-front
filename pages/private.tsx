@@ -14,18 +14,6 @@ export const MDEditor = dynamic<MDEditorProps>(
     { ssr: false }
 )
 
-const ADD_POST = gql`
-    mutation createPost($title: String, $tags: [String], $html: String) {
-        createPost(title: $title, tags: $tags, html: $html) {
-            _id
-            tags
-            html
-            createdAt
-            title
-        }
-    }
-`
-
 
 const Page : NextPage = () => {
     const router = useRouter()

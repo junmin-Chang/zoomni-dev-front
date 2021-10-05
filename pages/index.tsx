@@ -5,6 +5,7 @@ import Head from "next/head";
 import {GET_ALL_POSTS} from "../lib/query";
 import {useState} from "react";
 import Pagination from "../components/pagination";
+
 export const renderDate =  (dateString : string) => {
     const date = new Date(dateString);
     const monthName = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
@@ -26,7 +27,7 @@ export async function getStaticProps() {
         props : {
             posts: data.posts
         },
-        revalidate: 10
+        revalidate: 1000
     }
 }
 

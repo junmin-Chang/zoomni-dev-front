@@ -2,7 +2,6 @@ import Link from "next/link";
 import {renderDate, renderTags} from "./index";
 import {GET_CATEGORY_POSTS} from "../lib/query";
 import {sidebarData} from "../components/SidebarData";
-import Layout from "../components/layout";
 import Head from "next/head";
 import {useRouter} from "next/router";
 import client from "../apollo-client";
@@ -61,7 +60,7 @@ export async function getStaticProps({ params } : any) {
         props: {
             posts: data.category
         },
-        revalidate: 10,
+        revalidate: 1000,
     }
 }
 export async function getStaticPaths() {

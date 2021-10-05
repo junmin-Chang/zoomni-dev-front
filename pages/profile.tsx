@@ -1,4 +1,3 @@
-import Layout from "../components/layout";
 import Image from "next/image";
 import Head from 'next/head'
 function Profile() {
