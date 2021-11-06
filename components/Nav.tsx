@@ -21,7 +21,7 @@ function Nav() {
 
             <div className="flex">
                     <Link href="#">
-                        <a className="ml-8 text-3xl h-20 flex justify-start items-center text-white">
+                        <a className="ml-8 text-3xl h-20 flex justify-start items-center text-black">
                             <FaBars onClick={showSidebar} className="-mt-8"/>
                         </a>
                     </Link>
