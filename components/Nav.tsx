@@ -21,13 +21,13 @@ function Nav() {
 
             <div className="flex">
                     <Link href="#">
-                        <a className="ml-8 text-3xl h-20 flex justify-start items-center text-black">
+                        <a className="ml-8 text-3xl h-20 flex justify-start items-center text-black dark:text-white">
                             <FaBars onClick={showSidebar} className="-mt-8"/>
                         </a>
                     </Link>
                     <Link href="/">
                         <a className="home-title">
-                            <h3 className="logo">ZOOMNI.DEV</h3>
+                            <h3 className="logo text-black dark:text-white">ZOOMNI.DEV</h3>
                         </a>
                     </Link>
             </div>
@@ -36,7 +36,7 @@ function Nav() {
                             <svg
                                 onClick={() => setTheme("light")}
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-8 w-8 text-white mt-1 mr-2"
+                                className="h-8 w-8 text-black mt-1 mr-2 dark:text-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -53,7 +53,7 @@ function Nav() {
                             <svg
                                 onClick={() => setTheme("dark")}
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-8 w-8 text-white mt-1 mr-2"
+                                className="h-8 w-8 text-black mt-1 mr-2 dark:text-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
